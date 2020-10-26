@@ -1,7 +1,7 @@
 jQuery(document).ready(function( $ ) {
 
 jQuery(window).scroll(function() {
-    let links = $('#lista a')
+    let links = $('.menu-item')
    	if (jQuery(this).scrollTop() > 0) {
       jQuery('#header').addClass('header-scrolled');
       for(let i=0; i<links.length; i++){links[i].classList.add('text-color')}
@@ -28,7 +28,7 @@ $(window).scroll(function() {
 
 });
 
-$('.nav-menu a').on('click',function() {
+$('.menu-item').on('click',function() {
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
     var target = $(this.hash);
     if (target.length) {
